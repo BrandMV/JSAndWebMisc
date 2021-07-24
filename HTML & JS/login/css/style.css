@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+}
+body{
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container{
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background: rgba(0,0,0, .5);
+    border-radius: 10px;
+}
+.container h2{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.container .element label{
+    color: white;
+}
+.container .element input{
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background: transparent;
+    outline: none;
+    border-style: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+.container .element input[type="submit"]{
+    background: #F38BA0;
+    border: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 30px;
+}

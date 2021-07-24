@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo DOM JS</title>
+    <style>
+      .blue{
+        color:rgb(21, 115, 197);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+
+        DOM: Document Object Model, para manipular el DOM usamos el objeto document, cada elemento del DOM es un objeto en js
+
+     -->
+    <h1 id="title" class="blue">DOM example with Javascript</h1>
+    <p id="pr" class="blue">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis saepe
+      sunt quibusdam facilis, cupiditate fugiat porro voluptatum minus fugit
+      placeat dolore laborum. Enim ex sed aut ut voluptatem rem quaerat.
+    </p>
+    <p id="p2" class="blue">Aqui nomas otro parrafo</p>
+
+    <script>
+      // let title = document.getElementById("title")
+      // console.log(`Titulo: ${title.innerHTML}`)
+      // let pr = document.getElementById("pr")
+      // console.log(`Parrafo: ${pr.innerHTML}`);
+      // pr.innerHTML = "Cambia yeah"
+      // title.innerHTML = "Titulo cambiado"
+
+      // let paragraphs = document.getElementsByTagName('p')
+      // console.log(paragraphs.length);
+      // for(let i = 0; i < paragraphs.length; i++){
+      //   console.log(`Parrafo ${i}: ${paragraphs[i].innerHTML}`);
+      // }
+
+      // let para = document.getElementsByClassName("blue")
+      // for(let i = 0; i < para.length; i++){
+      //   console.log(`Parrafo ${i}: ${para[i].innerHTML}`);
+      // }
+
+      let elements = document.querySelectorAll('p.blue')
+      for(e of elements){
+        console.log(`elements: ${e.innerHTML}`);
+      }
+      
+    </script>
+  </body>
+</html>

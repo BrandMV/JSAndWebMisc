@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#clock{
+    font-family: sans-serif;
+    font-size: 60px;
+    text-shadow: 0px 0px 1px #333;
+    color: #F38BA0;
+}
+.clock-container{
+    background-color: #B5EAEA;
+    padding: 25px;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+#date{
+    letter-spacing: 10px;
+    font-size: 15px;
+}
+.animate{
+    border: 2px solid #F38BA0;
+}

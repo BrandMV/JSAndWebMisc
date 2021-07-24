@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <h1>Formularios en HTML</h1>
+    <!-- Por defecto se usa get para mandar datos, el metodo get manda datos desde la url, el post desde el cuerpo del html para manejarse por el servidor -->
+    <!-- <form action="myServer" method="POST" target="_blank"> -->
+    <form action="myServer" autocomplete="off">
+        <fieldset>
+            <legend>Form</legend>
+
+            <label for="id">Persona: </label>
+            <input type="text" name="id" id="id" placeholder="Write your name" readonly value="100" disabled/>
+            <br><br>
+
+            <!-- parametro oculto -->
+            <input type="hidden" name="system" id="system" value="SAP" />
+
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Write your name" required/>
+            <br><br>
+
+            <label for="lastName">Last Name: </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Write your last name" required/>
+            <br><br>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Write your email" required/>
+            <br><br>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Write your password" required/>
+            <br><br>
+
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age" placeholder="Write your age" required />
+            <br><br>
+
+            <label for="genre">Genre: </label>
+            <input type="radio" name="genre" id="female" value="female">
+            <label for="female">Female </label>
+            <input type="radio" name="genre" id="male" value="male">
+            <label for="male">Male </label>
+            <br><br>
+
+            <label for="music">Favorite Music</label>
+            <br>
+            <input type="checkbox" name="music" id="classic" value="classic">
+            <label for="classic">Classic</label>
+            <input type="checkbox" name="music" id="rock" value="rock">
+            <label for="rock">Rock</label>
+            <input type="checkbox" name="music" id="pop" value="pop">
+            <label for="pop">Pop</label>
+            <input type="checkbox" name="music" id="jazz" value="jazz">
+            <label for="jazz">Jazz</label>
+            <input type="checkbox" name="music" id="metal" value="metal">
+            <label for="metal">Metal</label>
+            <br><br>
+
+            <label for="cars">Favorite Car Brand:</label>
+            <br>
+            <select name="cars" id="cars" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="tesla" selected>Tesla</option>
+            </select>
+            <br><br>
+
+            <label for="comment">Comentario: </label><br>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <br><br>
+            <input type="submit" value="submit">
+            <input type="submit" value="submit without validate" formnovalidate="formnovalidate" >
+            <input type="reset" value="Reset">
+    </fieldset>
+
+    </form>
+</body>
+</html>

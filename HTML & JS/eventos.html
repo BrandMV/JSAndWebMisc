@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Monserrat', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" onmouseover="changeColor(this)" onmouseout="changeColorOut(this)">onMouseOver onMouseOut</h1>
+    <h2 id="title" onmousedown="changeColor(this)" onmouseup="changeColorOut(this)" onclick="chanceColorOn(this)">onMouseDown onMouseUp</h1>
+    <br>
+
+    <form id="formulario">
+        onfocus onblur: <input type="text" onfocus="changeInput(this)" onblur="changeInputOnBlur(this)">
+        <br><br>
+        onfocus onblur: <input type="text" onfocus="changeInput(this)" onblur="changeInputOnBlur(this)">
+        onfocus onblur inside form: <input type="text">
+        <br><br>
+        onfocus onblur inside form: <input type="text">
+        <br><br>
+        EventListener: <input type="text" id="eventListenerInput">
+        <br><br>
+        onChange: <input type="text" id="name" onchange="convert(this)" />
+    </form>
+  
+
+
+    <script>
+
+        const formulario = document.getElementById('formulario')
+
+        formulario.addEventListener('focus', (e) => e.target.style.background = 'pink', true)
+        formulario.addEventListener('blur', (e) => e.target.style.background = 'white', true) //con true indicamos que se aplique en elementos internos
+        const convert = (inputName) => {
+            inputName.value = inputName.value.toUpperCase()
+        }
+
+        const changeColor = (title) => {
+            title.style.color = 'green'
+        }
+        const changeColorOut = (title) => {
+            title.style.color = "blue"
+        }
+        const changeColorOn = (title) => {
+            title.style.color = 'red'
+        }
+
+        const changeInput = (input) => {
+            input.style.background = 'yellow'
+        }
+        const changeInputOnBlur = (input) => {
+            input.style.background = 'white'
+        }
+
+        // document.getElementById('eventListenerInput').addEventListener('focus', (e) => {
+        //     e.target.style.background = 'yellow'
+        // })  //no se pone on, solo el nombre del even
+        // document.getElementById('eventListenerInput').addEventListener('blur', (e) => e.target.style.background = 'white')
+    </script>
+</body>
+</html>

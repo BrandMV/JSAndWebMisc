@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1 id="title"">Titulo prron</h1>
+    <button onclick="show()">Show</button>
+    <br>
+    <img src="./javascript.png" alt="js" id="image">
+    <div id="show"></div>
+    <script>
+        // document.write('Grettings from javascript') //puede sobreescribir todo el contenido una vez que ya se carga el contenido de nuestra página
+        // document.getElementById('title').style.color = 'blue'
+        const show = () => {
+            image = document.getElementById('image').src
+            console.log(image);
+            image === 'http://127.0.0.1:5500/javascript.png' ? document.getElementById('image').src = './html5.png' : document.getElementById('image').src = './javascript.png'
+            document.getElementById('title').style.color = 'blue'
+        }
+        const changeText = () => {
+            document.getElementById('show').innerHTML = "New content"
+        }
+        
+        document.getElementById('title').onclick = changeText
+
+        const enter = () => {
+            alert('You´re entering to www.mywebsite.com')
+            let text = ''
+            if(navigator.cookieEnabled){
+                text = 'Cookies enabled'
+            }
+            else{
+                text = 'Cookies disabled'
+            }
+
+            document.getElementById('show').innerHTML = text
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formulario">
+        Name: <input type="text" name="name" value="Brandon" />
+        <br>
+        Last Name: <input type="text" name="lastName" value="Meza">
+        <br>
+    </form>
+
+    <button onclick="showValues()">Show</button>
+
+    <div id="formValues">
+
+    </div>
+
+    <script>
+        const showValues = () => {
+            let formulario = document.forms['formulario']
+            let text = ''
+            let name = formulario['name']
+            let lastName = formulario['lastName']
+            text = name.value + '<br/>' + lastName.value
+            // for(let element of formulario){
+            //     text += element.value + '<br />'
+            // }
+
+            document.getElementById('formValues').innerHTML = text
+
+
+        }
+    </script>
+</body>
+</html>
